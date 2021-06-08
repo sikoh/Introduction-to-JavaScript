@@ -17,8 +17,12 @@ Do the following:
 
    HINT: no function required
 */
+ const vatingAge = 50;
 
-
+ if (vatingAge >= 18);
+ {
+ console.log (true)}
+ 
 
 /*
 Task 1b - Values
@@ -31,10 +35,12 @@ Do the following:
    HINT: no function required
 */
 
+let myName = "bri";
+let favColor = "blue";
 
-
-
-
+if (favColor === 'blue' );
+{console.log (myName ='Kate')
+}
 /*
 Task 1c - Convert Strings to Numbers
 
@@ -47,6 +53,7 @@ Do the following:
 */
 
 
+const x = 1999
 
 
 /*
@@ -58,10 +65,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
-
+function multiply (a, b){
+  return a * b
+    }
+   
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,8 +81,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+
+
+dogYears=14
+
+function dogYears(age){
+ return age*7
 }
 
 
@@ -167,8 +178,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    let kilometers = 5;
+    let miles= (kilometers/1.609);
+    return miles
   }
 
 
