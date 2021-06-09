@@ -40,7 +40,8 @@ let myName = "bri";
 let favColor = "blue";
 
 if (favColor === "blue") {
-  console.log((myName = "Kate"));
+  myName = "Kate";
+  console.log(myName);
 }
 /*
 Task 1c - Convert Strings to Numbers
@@ -53,9 +54,10 @@ Do the following:
    HINT: look up the Number methods
 */
 
-const x = "1999";
-const num = parseFloat(x);
-console.log(num);
+const stringValue = "1999";
+const numberValue = Number(stringValue);
+console.log(numberValue);
+
 /*
 Task 1d - Multiply
  
@@ -66,9 +68,9 @@ Do the following:
 */
 
 function multiply(a, b) {
-  multiply(5, 5);
   return a * b;
 }
+// multiply(5, 5);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -81,10 +83,10 @@ Do the following:
 */
 
 function dogYears(age) {
-  var yourDog = age * 7;
-  dogYears(14);
+  let yourDog = age * 7;
   return yourDog;
 }
+// dogYears(14);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -156,7 +158,31 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let randNum = Math.random();
+let computerChoice =
+  randNum < 0.33
+    ? "rock"
+    : randNum >= 0.33 && randNum < 0.66
+    ? "paper"
+    : "scissors";
+
 function game(user, computer) {
+  if (user === "rock") {
+    if (computer === "paper") return "you lose!";
+    if (computer === "scissors") return "you win!";
+    return "it's a tie";
+  }
+  if (user === "paper") {
+    if (computer === "scissors") return "you lose!";
+    if (computer === "rock") return "you win!";
+    return "it's a tie";
+  }
+  if (user === "scissors") {
+    if (computer === "rock") return "you lose!";
+    if (computer === "paper") return "you win!";
+    return "it's a tie";
+  }
+
   /*add your code here*/
 }
 
@@ -172,8 +198,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers) {
-  let kilometers = 5;
-  let miles = kilometers / 1.609;
+  let miles = kilometers * 0.621371;
   return miles;
 }
 
@@ -185,11 +210,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-let cm = 235;
-let cm = ft / 0.032808;
-ft = cm * 0.032808;
-function feet(/*add your code here*/) {
-  /*add your code here*/
+// let cm = 235;
+// let cm = ft / 0.032808;
+// ft = cm * 0.032808;
+function feet(centimeters) {
+  const feet = centimeters / 30.48;
+  return feet;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -202,8 +228,10 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/) {
-  /*add your code here*/
+function annoyingSong(startingNumber) {
+  return `${startingNumber} bottles of soda on the wall, ${startingNumber} bottles of soda, take one down pass it around ${
+    startingNumber - 1
+  } bottles of soda on the wall`;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -221,8 +249,12 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
 
-function grade(/*Your Code here */) {
-  /*Your Code here */
+function grade(score) {
+  if (score >= 90) return "you got an A";
+  if (score >= 80) return "you got a B";
+  if (score >= 70) return "you got a C";
+  if (score >= 60) return "you got a D";
+  return "you got an F";
 }
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
