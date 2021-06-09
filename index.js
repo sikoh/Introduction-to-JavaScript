@@ -1,5 +1,7 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
+import { TestWatcher } from "@jest/core";
+
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 /*
@@ -17,17 +19,16 @@ Do the following:
 
    HINT: no function required
 */
- const vatingAge = 50;
+const votingAge = 50;
 
- if (vatingAge >= 18);
- {
- console.log (true)}
- 
+if (votingAge >= 18) {
+  console.log(true);
+}
 
 /*
 Task 1b - Values
 
-Do the following:   
+Do the following:
    1. Declare two variables and assign them values
    2. Use a conditional to change the value of the 1st variable based on the value assigned to the 2nd variable
    3. Console log the new value of the 1st variable
@@ -38,8 +39,8 @@ Do the following:
 let myName = "bri";
 let favColor = "blue";
 
-if (favColor === 'blue' );
-{console.log (myName ='Kate')
+if (favColor === "blue") {
+  console.log((myName = "Kate"));
 }
 /*
 Task 1c - Convert Strings to Numbers
@@ -49,27 +50,25 @@ Do the following:
    2. Convert the string value of "1999" to a integer value of 1999
    3. Console log the result
 
-   HINT: look up the Number method
+   HINT: look up the Number methods
 */
 
-
-const x = 1999
-
-
+const x = "1999";
+const num = parseFloat(x);
+console.log(num);
 /*
 Task 1d - Multiply
  
-Do the following:   
+Do the following:
    1. Invoke the multiply function below and pass it two numbers
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
 
-function multiply (a, b){
-  return a * b
-    }
-   
-
+function multiply(a, b) {
+  multiply(5, 5);
+  return a * b;
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -81,15 +80,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-
-
-dogYears=14
-
-function dogYears(age){
- return age*7
+function dogYears(age) {
+  var yourDog = age * 7;
+  dogYears(14);
+  return yourDog;
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -116,25 +111,25 @@ Use the hungryDog function and feeding requirements below to do the following:
      7 - 12 months 4% of their body weight
     
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
-function hungryDog(weight, age){
-   if(age>=1 && weight <=5){
-     return weight * 0.5;
-   }else if (age >=1 && weight >=66 && weight<= 10){
-     return weight * 0.04;
-   }else if (age >=1 && weight>=11 && weight<=15){
-     return weight * 0.03;
-   }else if (age >=1 && weight>15){
-     return weight * 0.02;
-   }else if ( age <1 && age >= 0.583 ){
-     return weight * 0.04;
-   } else if ( age < 0.538 && age>= 0.333){
-   return weight * 0.05;
-  } else if ( age < 0.333 ){
-    return weight * 0.10;
-  }else {
-    return "please try again"
+function hungryDog(weight, age) {
+  if (age >= 1 && weight <= 5) {
+    return weight * 0.5;
+  } else if (age >= 1 && weight >= 66 && weight <= 10) {
+    return weight * 0.04;
+  } else if (age >= 1 && weight >= 11 && weight <= 15) {
+    return weight * 0.03;
+  } else if (age >= 1 && weight > 15) {
+    return weight * 0.02;
+  } else if (age < 1 && age >= 0.583) {
+    return weight * 0.04;
+  } else if (age < 0.538 && age >= 0.333) {
+    return weight * 0.05;
+  } else if (age < 0.333) {
+    return weight * 0.1;
+  } else {
+    return "please try again";
   }
 }
 
@@ -161,16 +156,14 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+function game(user, computer) {
+  /*add your code here*/
 }
-  
-  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Metric Converter 
-//Task 5a - KM to Miles 
+//Metric Converter
+//Task 5a - KM to Miles
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
@@ -178,13 +171,11 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(kilometers){
-    let kilometers = 5;
-    let miles= (kilometers/1.609);
-    return miles
-  }
-
-
+function miles(kilometers) {
+  let kilometers = 5;
+  let miles = kilometers / 1.609;
+  return miles;
+}
 
 //Task 5b - Feet to CM
 /*
@@ -194,11 +185,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
-
+let cm = 235;
+let cm = ft / 0.032808;
+ft = cm * 0.032808;
+function feet(/*add your code here*/) {
+  /*add your code here*/
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -210,10 +202,9 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
-
+function annoyingSong(/*add your code here*/) {
+  /*add your code here*/
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -229,12 +220,10 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
+
+function grade(/*Your Code here */) {
   /*Your Code here */
-  }
-  
-  
+}
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -248,27 +237,24 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
 function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+  /*add your code here*/
 }
-
-
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-    //console.log('its working');
-    return 'bar';
+function foo() {
+  //console.log('its working');
+  return "bar";
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+export default {
+  foo,
+  multiply,
+  dogYears,
+  hungryDog,
+  game,
+  miles,
+  feet,
+  annoyingSong,
+  grade,
+};
